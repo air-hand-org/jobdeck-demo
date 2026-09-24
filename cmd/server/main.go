@@ -4,7 +4,7 @@ package main
 import (
 	"context"
 	"fmt"
-	"jobdeck/services/demo/internal/transport"
+	"github.com/air-hand-org/jobdeck-demo/internal/transport"
 	"log/slog"
 	"net/http"
 	"os"
