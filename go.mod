@@ -1,4 +1,4 @@
-module jobdeck/services/demo
+module github.com/air-hand-org/jobdeck-demo
 
 go 1.26.4
 
