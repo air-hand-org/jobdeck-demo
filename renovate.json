@@ -1,6 +1,15 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended"],
+  "extends": [
+    "github>aquaproj/aqua-renovate-config#2.13.0",
+    "helpers:pinGitHubActionDigestsToSemver",
+    "config:recommended",
+    ":semanticCommits"
+  ],
+  "prConcurrentLimit": 10,
+  "enabledManagers": ["custom.regex", "mise", "github-actions", "gomod", "dockerfile"],
+  "labels": ["dependencies"],
+  "minimumReleaseAge": "3 days",
   "automerge": false,
   "automergeType": "pr",
   "automergeStrategy": "squash",
@@ -14,9 +23,52 @@
   },
   "packageRules": [
     {
-      "description": "Demo experiment: only minor and patch updates opt into GitHub platform auto-merge",
-      "matchUpdateTypes": ["minor", "patch"],
+      "matchUpdateTypes": ["major"],
+      "addLabels": ["major"],
+      "automerge": false
+    },
+    {
+      "description": "Demo experiment: minor updates opt into GitHub platform auto-merge",
+      "matchUpdateTypes": ["minor"],
+      "addLabels": ["minor"],
       "automerge": true
+    },
+    {
+      "description": "Demo experiment: patch updates opt into GitHub platform auto-merge",
+      "matchUpdateTypes": ["patch"],
+      "addLabels": ["patch"],
+      "automerge": true
+    },
+    {
+      "description": "Update mise Go version with go.mod Go directive",
+      "matchManagers": ["mise"],
+      "matchDepNames": ["go"],
+      "groupName": "Go",
+      "groupSlug": "go",
+      "semanticCommitType": "fix",
+      "semanticCommitScope": "deps"
+    },
+    {
+      "description": "Update go.mod Go directive with mise Go version",
+      "matchManagers": ["gomod"],
+      "matchDepNames": ["go"],
+      "matchDepTypes": ["golang"],
+      "groupName": "Go",
+      "groupSlug": "go",
+      "rangeStrategy": "bump",
+      "semanticCommitType": "fix",
+      "semanticCommitScope": "deps"
+    },
+    {
+      "matchManagers": ["gomod"],
+      "postUpdateOptions": ["gomodTidy", "gomodUpdateImportPaths"]
     }
-  ]
+  ],
+  "mise": {
+    "managerFilePatterns": [
+      "(^|/)\\.?mise\\.toml$",
+      "(^|/)\\.?mise/config\\.toml$",
+      "(^|/)\\.?mise/config.*\\.toml$"
+    ]
+  }
 }
