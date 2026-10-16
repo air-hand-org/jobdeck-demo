@@ -1,0 +1,22 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:recommended"],
+  "automerge": false,
+  "automergeType": "pr",
+  "automergeStrategy": "squash",
+  "platformAutomerge": true,
+  "rebaseWhen": "behind-base-branch",
+  "vulnerabilityAlerts": {
+    "automerge": false
+  },
+  "lockFileMaintenance": {
+    "automerge": false
+  },
+  "packageRules": [
+    {
+      "description": "Demo experiment: only minor and patch updates opt into GitHub platform auto-merge",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": true
+    }
+  ]
+}
