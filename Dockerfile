@@ -1,7 +1,13 @@
 # syntax=docker/dockerfile:1
 
-FROM golang:1.26.4-bookworm AS build
+FROM ghcr.io/jdx/mise:2026.10.4-debian AS build
 WORKDIR /src
+ENV GOPATH=/go \
+    GOTOOLCHAIN=local \
+    MISE_TRUSTED_CONFIG_PATHS=/src
+
+COPY mise.toml ./
+RUN mise install && mise reshim
 
 COPY go.mod go.sum ./
 RUN --mount=type=cache,target=/go/pkg/mod,id=jobdeck-go-mod \
