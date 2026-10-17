@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.4.0](https://github.com/air-hand-org/jobdeck-demo/compare/v1.3.2...v1.4.0) (2026-10-17)
+
+
+### Features
+
+* add /403 demo and move Renovate config under .github ([#13](https://github.com/air-hand-org/jobdeck-demo/issues/13)) ([20fd042](https://github.com/air-hand-org/jobdeck-demo/commit/20fd0420c5ca817a44caf7cc6628734273d61b85))
+* add forbidden response demo and relocate Renovate config ([20fd042](https://github.com/air-hand-org/jobdeck-demo/commit/20fd0420c5ca817a44caf7cc6628734273d61b85))
+
+
+### Bug Fixes
+
+* use mise-managed Go in Docker builder ([#17](https://github.com/air-hand-org/jobdeck-demo/issues/17)) ([75658a4](https://github.com/air-hand-org/jobdeck-demo/commit/75658a46a93574f2b2dfe1dc64a1582ac0f63e7b))
+
 ## [1.3.2](https://github.com/air-hand-org/jobdeck-demo/compare/v1.3.1...v1.3.2) (2026-09-24)
 
 
