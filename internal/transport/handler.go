@@ -13,6 +13,7 @@ func NewHTTPHandler() *http.ServeMux {
 	mux.HandleFunc("/healthz", healthzHandler)
 
 	mux.HandleFunc("/200", okHandler)
+	mux.HandleFunc("/403", forbiddenHandler)
 	mux.HandleFunc("/404", notFoundHandler)
 	mux.HandleFunc("/504", gatewayTimeoutHandler)
 	mux.HandleFunc("/sleep/60", sleep60secHandler)
@@ -37,6 +38,11 @@ func okHandler(w http.ResponseWriter, _ *http.Request) {
 func notFoundHandler(w http.ResponseWriter, _ *http.Request) {
 	w.WriteHeader(http.StatusNotFound)
 	_, _ = w.Write([]byte("not found\n"))
+}
+
+func forbiddenHandler(w http.ResponseWriter, _ *http.Request) {
+	w.WriteHeader(http.StatusForbidden)
+	_, _ = w.Write([]byte("forbidden\n"))
 }
 
 func gatewayTimeoutHandler(w http.ResponseWriter, _ *http.Request) {
