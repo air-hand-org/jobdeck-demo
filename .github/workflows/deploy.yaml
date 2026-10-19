@@ -28,7 +28,7 @@ jobs:
   release-dispatch:
     if: ${{ github.event.release.prerelease == false }}
     needs: images
-    uses: air-hand-org/jobdeck-actions/.github/workflows/reusable-release-dispatch.yaml@8d1b8ef5e614ae82eeaf20248fa2813dce7866e5 # v1.5.1
+    uses: air-hand-org/jobdeck-actions/.github/workflows/reusable-release-dispatch.yaml@0c939fe8c3269e6baa99c35e05e0f076b118d5f1 # v1.5.2
     with:
       service-names: demo
     secrets: inherit
