@@ -19,8 +19,8 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: air-hand-org/jobdeck-actions/actions/setup-tools@19271b7a2a9332bc2066ae136c0b2dc1d8751747 # v1.5.0
-      - uses: air-hand-org/jobdeck-actions/actions/cache-go@19271b7a2a9332bc2066ae136c0b2dc1d8751747 # v1.5.0
+      - uses: air-hand-org/jobdeck-actions/actions/setup-tools@8d1b8ef5e614ae82eeaf20248fa2813dce7866e5 # v1.5.1
+      - uses: air-hand-org/jobdeck-actions/actions/cache-go@8d1b8ef5e614ae82eeaf20248fa2813dce7866e5 # v1.5.1
       - name: build
         run: make build
       - name: lint
