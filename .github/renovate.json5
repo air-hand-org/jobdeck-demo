@@ -23,6 +23,12 @@
   },
   "packageRules": [
     {
+      "description": "Consume internally controlled jobdeck-actions releases without an additional delay",
+      "matchManagers": ["github-actions"],
+      "matchPackageNames": ["air-hand-org/jobdeck-actions"],
+      "minimumReleaseAge": "0 days"
+    },
+    {
       "matchUpdateTypes": ["major"],
       "addLabels": ["major"],
       "automerge": false
