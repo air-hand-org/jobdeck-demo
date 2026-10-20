@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
-      - uses: air-hand-org/jobdeck-actions/actions/setup-tools@0c939fe8c3269e6baa99c35e05e0f076b118d5f1 # v1.5.2
+      - uses: air-hand-org/jobdeck-actions/actions/setup-tools@e5aa60360a796502ea0b51616eafdd097c9f731b # v1.5.3
         if: matrix.language == 'go'
       - name: Initialize CodeQL
         uses: github/codeql-action/init@6f2ac81f5cd81fe351a197ba0b00d91d03cd2aee # v4.39.0
