@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM ghcr.io/jdx/mise:2026.10.4-debian AS build
+FROM ghcr.io/jdx/mise:2026.10.15-debian AS build
 WORKDIR /src
 ENV GOPATH=/go \
     GOTOOLCHAIN=local \
