@@ -8,6 +8,14 @@ setup:
 
 .PHONY: build
 build: go-build
+	@$(MAKE) licenses
+
+# Match the platform currently published by _build-images.yaml.
+.PHONY: licenses
+licenses:
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go-licenses check ./cmd/server --ignore github.com/air-hand-org/jobdeck-demo --disallowed_types=forbidden,unknown
+	rm -rf third_party/licenses/linux-amd64
+	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go-licenses save ./cmd/server --ignore github.com/air-hand-org/jobdeck-demo --save_path third_party/licenses/linux-amd64
 
 .PHONY: fmt
 fmt: go-fmt

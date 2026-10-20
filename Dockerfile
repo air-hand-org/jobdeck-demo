@@ -22,5 +22,7 @@ RUN --mount=type=cache,target=/go/pkg/mod,id=jobdeck-go-mod \
 
 FROM gcr.io/distroless/base-debian12:nonroot
 COPY --from=build /out/demo /demo
+COPY LICENSE /LICENSE
+COPY third_party/licenses/linux-amd64 /third_party
 USER nonroot:nonroot
 ENTRYPOINT ["/demo"]
