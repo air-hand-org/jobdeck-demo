@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.2](https://github.com/air-hand-org/jobdeck-demo/compare/v1.4.1...v1.4.2) (2026-10-21)
+
+
+### Bug Fixes
+
+* include license documents in container image ([#34](https://github.com/air-hand-org/jobdeck-demo/issues/34)) ([1230f73](https://github.com/air-hand-org/jobdeck-demo/commit/1230f730faf5c1822a73a11049a9f64db584df12))
+
 ## [1.4.1](https://github.com/air-hand-org/jobdeck-demo/compare/v1.4.0...v1.4.1) (2026-10-19)
 
 
