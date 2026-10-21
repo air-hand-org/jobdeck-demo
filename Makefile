@@ -7,8 +7,7 @@ setup:
 	@aqua i && mise i
 
 .PHONY: build
-build: go-build
-	@$(MAKE) licenses
+build: go-build licenses
 
 # Match the platform currently published by _build-images.yaml.
 .PHONY: licenses
