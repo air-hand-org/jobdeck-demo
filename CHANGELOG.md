@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.3](https://github.com/air-hand-org/jobdeck-demo/compare/v1.4.2...v1.4.3) (2026-10-24)
+
+
+### Bug Fixes
+
+* **deps:** update dependency go to v1.27.3 ([#37](https://github.com/air-hand-org/jobdeck-demo/issues/37)) ([6e74a27](https://github.com/air-hand-org/jobdeck-demo/commit/6e74a272de50ad338564ad8782eca59e74ccb57c))
+
 ## [1.4.2](https://github.com/air-hand-org/jobdeck-demo/compare/v1.4.1...v1.4.2) (2026-10-21)
 
 
