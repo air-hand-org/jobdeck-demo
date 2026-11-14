@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.4](https://github.com/air-hand-org/jobdeck-demo/compare/v1.4.3...v1.4.4) (2026-11-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency go to v1.27.4 ([#61](https://github.com/air-hand-org/jobdeck-demo/issues/61)) ([3dc2082](https://github.com/air-hand-org/jobdeck-demo/commit/3dc2082bb7cf0bbda4b19207611324569e699545))
+* **deps:** update module golang.org/x/sync to v0.25.0 ([#57](https://github.com/air-hand-org/jobdeck-demo/issues/57)) ([da1ac5d](https://github.com/air-hand-org/jobdeck-demo/commit/da1ac5de79d65b1e4c947f740afc7e0e158cfa2b))
+
 ## [1.4.3](https://github.com/air-hand-org/jobdeck-demo/compare/v1.4.2...v1.4.3) (2026-10-31)
 
 
