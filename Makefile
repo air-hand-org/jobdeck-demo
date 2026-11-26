@@ -29,3 +29,6 @@ check-clean:
 
 .PHONY: test
 test: go-test
+
+.PHONY: test-race
+test-race: go-test-race
